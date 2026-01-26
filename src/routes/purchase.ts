@@ -7,6 +7,8 @@ import { authMiddleware } from "../middleware/authMiddleware";
 
 const router = Router();
 
+// Question - 10
+
 router.post('/', authMiddleware, async(req:Request, res: Response) => {
     try {
         const userId = req.user?.userId as string;
@@ -59,6 +61,8 @@ router.post('/', authMiddleware, async(req:Request, res: Response) => {
         });
     }
 });
+
+// Question - 11
 
 router.get('/users/:id/purchases', authMiddleware, async(req:Request, res: Response) => {
     try {

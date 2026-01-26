@@ -9,6 +9,8 @@ const saltRounds = Number(process.env.SALT_ROUNDS) || 10;
 
 const router = Router();
 
+// Question - 1
+
 router.post('/signup', async(req: Request, res: Response) => {
     try{
         const validation = schemas.SignupSchema.safeParse(req.body);
@@ -49,6 +51,8 @@ router.post('/signup', async(req: Request, res: Response) => {
         });
     }
 });
+
+// Question - 2
 
 router.post('/login', async(req: Request, res: Response) => {
     try{

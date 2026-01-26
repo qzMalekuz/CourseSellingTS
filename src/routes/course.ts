@@ -8,6 +8,8 @@ import { authMiddleware } from "../middleware/authMiddleware";
 
 const router = Router();
 
+// Question - 3
+
 router.post('/', authMiddleware, async(req: Request, res: Response) => {
     try {
         const validation = schemas.CreateCourseSchema.safeParse(req.body);
@@ -55,6 +57,8 @@ router.post('/', authMiddleware, async(req: Request, res: Response) => {
     }
 });
 
+// Question - 4
+
 router.get('/', async(req: Request, res: Response) => {
     try {
         const courses = await prisma.course.findMany({
@@ -72,6 +76,8 @@ router.get('/', async(req: Request, res: Response) => {
         });
     }
 });
+
+// Question - 5
 
 router.get('/:id', authMiddleware, async(req: Request, res: Response) => {
    try {
@@ -116,6 +122,8 @@ router.get('/:id', authMiddleware, async(req: Request, res: Response) => {
         });
     }
 });
+
+// Question - 6
 
 router.patch('/:id', authMiddleware, async(req: Request, res: Response) => {
     try {
@@ -173,6 +181,8 @@ router.patch('/:id', authMiddleware, async(req: Request, res: Response) => {
     }
 });
 
+// Question - 7
+
 router.delete('/:id', authMiddleware, async(req: Request, res: Response) => {
     try {
         const courseId = req.params.courseId as string;
@@ -213,6 +223,8 @@ router.delete('/:id', authMiddleware, async(req: Request, res: Response) => {
         });
     }
 });
+
+// Question - 8
 
 router.post('/:courseId/lessons', authMiddleware, async(req:Request, res: Response) => {
     try {

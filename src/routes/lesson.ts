@@ -7,6 +7,8 @@ import { authMiddleware } from "../middleware/authMiddleware";
 
 const router = Router();
 
+// Question - 9
+
 router.post('/', authMiddleware, async(req:Request, res: Response) => {
     try {
         const validation = schemas.CreateLessonSchema.safeParse(req.body);
