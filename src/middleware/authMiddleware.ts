@@ -1,4 +1,4 @@
-import express, { type Request, type Response, type NextFunction } from "express";
+import { type Request, type Response, type NextFunction } from "express";
 import jwt, { type JwtPayload } from "jsonwebtoken";
 
 const jwtSecret = process.env.JWT_SECRET;
