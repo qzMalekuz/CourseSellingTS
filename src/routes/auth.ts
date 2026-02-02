@@ -54,6 +54,7 @@ router.post('/signup', async(req: Request, res: Response) => {
 });
 
 // Question - 2
+// login endpoint
 
 router.post('/login', async(req: Request, res: Response) => {
     try{
