@@ -212,8 +212,6 @@ router.delete('/:id', authMiddleware, async(req: Request, res: Response) => {
             success: true,
             data: "SuccessfullyDeleted"
         })
-
-        // error handler
         
     } catch (err) {
         return res.status(500).json({
